@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @media only screen and (max-width: 992px) {
+      .ig {
+        max-width: 225px;
+        width: 100%;
+      }
+    }
+
+    @media screen and (min-width : 992px) {
+
+      .fb {
+        width: 50px;
+        height: auto;
+        display: none;
+        position: absolute;
+        animation: fadeIn 2s;
+        left: 75px;
+        display: none;
+      }
+
+      .ig {
+        width: 50px;
+        height: auto;
+        display: none;
+        position: absolute;
+        animation: fadeIn 2s;
+        right: 1475px;
+        display: none;
+      }
+
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        100% {
+          opacity: 1;
+        }
+
+        0% {
+          opacity: 0;
+        }
+      }
+
+
+      p {
+
+        color: black;
+        font-size: 30px;
+        text-shadow: 1px 1px 1px red;
+        border-style: solid;
+        background-color: white;
+        width: 1085px;
+        animation: fadeIn 2s;
+
+
+      }
+
+
+      body {
+        background-image: url('websitebackground.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-color: white;
+      }
+
+      .navbar {
+        overflow: hidden;
+      }
+
+      .dp {
+        height: 300px;
+        width: 400px;
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+
+      h1 {
+
+        color: black;
+        text-shadow: 3px 3px 3px red;
+        font-size: 60px;
+        text-align: center;
+
+        animation: fadeIn 2s;
+        /*animation-name: anime;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      opacity: 0.7;*/
+      }
+
+      /*@keyframes anime {
+      0% {
+        background-color: black;
+      }
+
+      25% {
+        background-color: pink;
+      }
+
+      50% {
+        background-color: black;
+      }
+
+      100% {
+        background-color: pink;
+      }
+    }*/
+
+      h2 {
+        text-align: center;
+        font-size: 100px;
+        color: black;
+        background-color: white;
+        display: inline-block;
+        opacity: 0.7;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: black;
+
+      }
+
+      .navbar a:active,
+      .dropdown:active .dropbtn {
+        color: pink;
+      }
+
+      .navbar a:focus {
+        background-color: black;
+
+      }
+
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+
+
+      img {
+        width: 500px;
+        height: 500px;
+      }
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      /* Important for vertical align on mobile phones */
+      margin: 0;
+      /* Important for vertical align on mobile phones */
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      float: none;
+
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      background-color: black;
+      color: white;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar a:active,
+    .dropdown:active .dropbtn {
+      color: pink;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .column img:hover {
+      opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* The expanding image container */
+    .container {
+      position: relative;
+      display: none;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      font-size: 20px;
+    }
+
+    /* Closable button inside the expanded image */
+    .closebtn {
+      position: absolute;
+      top: auto;
+      left: auto;
+      color: black;
+      font-size: 35px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="navbar">
+    <a href="#" id="home" onclick="getHome(); removeError();return false;">HOME</a>
+    <a href="#" id="aboutme" onclick="getAboutMe(); removeError();return false;">ABOUT ME</a>
+
+    <div class="dropdown">
+
+      <button class="dropbtn">RELEVANT TRIPS
+        <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="#" id="AS" onclick="getTF(); removeError();return false;">TF SCALE V</a>
+        <a href="#" id="AS" onclick="getAS(); removeError();return false;">AddOn Systems Ptd Ltd</a>
+        <a href="#" id="MTLA" onclick="getMTLA(); removeError();return false;">Muang Thai Life Assurance</a>
+      </div>
+    </div>
+  </div>
+  <h1 id="header"><b>Lim Caleb<br>
+      Web Designer Resume
+    </b></h1>
+  <img src='profilepic.jpeg' id="dp" class="dp">
+
+  <p id="demo" style="display:none">Name: Lim Caleb</br>
+    Age: 24 Years Old</br>
+    Date of Birth: 13/10/1998</br>
+    Email: caberzikis@gmail.com</br>
+    Phone Number: +65 9999 9999</br>
+    Address: Pasir Ris, Singapore
+  </p>
+
+  <a href="https://www.instagram.com/caberzikis/" target="_blank"><img src="ig.webp" id="ig" class="ig" /></a>
+  <a href="https://www.facebook.com/caberzikis/" target="_blank"><img src="fb.png" id="fb" class="fb" /></a>
+
+  <div class="row">
+
+    <div class="column">
+      <img id="proj1" src="chinese project 1.jpg" alt="proj1" style="width:auto;display: none;height:200px;width:auto;"
+        onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img id="proj2" src="chinese project 2.jpg" alt="proj2" style="width:auto;display: none;height:200px;width:auto"
+        onclick="myFunction(this);">
+    </div>
+
+  </div>
+  <div class="row">
+
+    <div class="column">
+      <img id="addon" src="addonsystems1.jpg" alt="addon" style="width:auto;display: none;height:200px;width:auto"
+        onclick="myFunction(this);">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img id="thai1" src="thailand(with me).jpg" alt="thai1" style="width:auto;display: none;height:200px;width:auto;"
+        onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img id="thai2" src="thailand(without me).jpg" alt="thai2"
+        style="width:auto;display: none;height:200px;width:auto" onclick="myFunction(this);">
+    </div>
+  </div>
+
+  <div id="con1" class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:auto">
+    <div id="imgtext"></div>
+  </div>
+  <div class="row">
+
+
+  </div>
+
+</body>
+
+<script>
+  function removeError() {
+    var a = document.getElementById("ig");
+    var b = document.getElementById("fb");
+    var c = document.getElementById("dp");
+  }
+  function getHome() {
+    document.getElementById("ig").style.display = 'none';
+    document.getElementById("fb").style.display = 'none';
+    document.getElementById("demo").style.display = 'none';
+    document.getElementById("header").style.display = 'block';
+    document.getElementById("proj1").style.display = 'none';
+    document.getElementById("proj2").style.display = 'none';
+    document.getElementById("con1").style.display = 'none';
+    document.getElementById("addon").style.display = 'none';
+    document.getElementById("thai1").style.display = 'none';
+    document.getElementById("thai2").style.display = 'none';
+
+  }
+
+
+
+  function getAboutMe() {
+
+
+    document.getElementById("demo").style.display = 'block';
+    document.getElementById("ig").style.display = 'block';
+    document.getElementById("fb").style.display = 'block';
+    document.getElementById("header").style.display = 'none';
+    document.getElementById("proj1").style.display = 'none';
+    document.getElementById("proj2").style.display = 'none';
+    document.getElementById("con1").style.display = 'none';
+
+
+
+  }
+
+  function getTF() {
+    document.getElementById("demo").style.display = 'none';
+    document.getElementById("ig").style.display = 'none';
+    document.getElementById("fb").style.display = 'none';
+    document.getElementById("header").style.display = 'none';
+    document.getElementById("proj1").style.display = 'block';
+    document.getElementById("proj2").style.display = 'block';
+    document.getElementById("addon").style.display = 'none';
+    document.getElementById("con1").style.display = 'none';
+    document.getElementById("thai1").style.display = 'none';
+    document.getElementById("thai2").style.display = 'none';
+  }
+
+  function getAS() {
+    document.getElementById("demo").style.display = 'none';
+    document.getElementById("ig").style.display = 'none';
+    document.getElementById("fb").style.display = 'none';
+    document.getElementById("header").style.display = 'none';
+    document.getElementById("proj1").style.display = 'none';
+    document.getElementById("proj2").style.display = 'none';
+    document.getElementById("addon").style.display = 'block';
+    document.getElementById("con1").style.display = 'none';
+    document.getElementById("thai1").style.display = 'none';
+    document.getElementById("thai2").style.display = 'none';
+  }
+
+  function getMTLA() {
+    document.getElementById("demo").style.display = 'none';
+    document.getElementById("ig").style.display = 'none';
+    document.getElementById("fb").style.display = 'none';
+    document.getElementById("header").style.display = 'none';
+    document.getElementById("proj1").style.display = 'none';
+    document.getElementById("proj2").style.display = 'none';
+    document.getElementById("thai1").style.display = 'block';
+    document.getElementById("thai2").style.display = 'block';
+    document.getElementById("addon").style.display = 'none';
+    document.getElementById("con1").style.display = 'none';
+  }
+
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+</script>
+
+</html>
